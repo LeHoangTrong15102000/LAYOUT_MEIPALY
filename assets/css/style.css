@@ -1,8 +1,8 @@
 @charset "UTF-8";
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -27,6 +27,16 @@ a {
 /*Bỏ đấu chấm của thẻ li*/
 li {
   list-style-type: none;
+}
+
+.carousel {
+  background-image: url(../img/home_slider.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
