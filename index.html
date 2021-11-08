@@ -26,7 +26,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -61,28 +61,26 @@
   </head>
   <body>
     <!--header-->
-    <header class="header">
-      <div class="header__content">
+    <header id="header" class="header">
+      <div class="container">
         <a href="" class="header__logo">
           <i class="fab fa-atlassian"></i>
           <span>Meipaly</span>
         </a>
 
-        <nav>
-          <ul>
-            <li class="active"><a href="#">HOME</a></li>
-            <li><a href="#"></a>SERVICE</li>
-            <li><a href="#"></a>SHOWCASE</li>
-            <li><a href="#">BLOG</a></li>
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">CONTACT</a></li>
-          </ul>
+        <nav class="navbar">
+          <a class="active" href="#home">home</a>
+          <a href="#service">service</a>
+          <a href="#showcase">showcase</a>
+          <a href="#blog">blog</a>
+          <a href="#number">about us</a>
+          <a href="#contact">contact</a>         
         </nav>
       </div>
     </header>
 
     <!--Carousel-->
-    <section class="carousel">
+    <section id="carousel" class="carousel">
       <div class="carousel__content">
         <p>WELCOME TO MEIPALY AGENCY</p>
         <h1>SMART WEB<br />DESIGN AGENCY</h1>
@@ -95,295 +93,396 @@
     </section>
 
     <!--Services-->
-    <section class="service">
-      <div class="service__content">
-        <div class="title">
-          <p>SERVICES WE ARE OFFERING</p>
-          <h2>WE DESIGN DIGITAL PRODUCTS THAT HELP GROW BUSINESSES</h2>
-          <p><br></p>
-        </div>
+    <section id="service" class="service">
+      <div class="container">
+        <header>
+          <div class="title">
+            <p>SERVICES WE ARE OFFERING</p>
+            <h2>WE DESIGN DIGITAL PRODUCTS THAT HELP GROW BUSINESSES</h2>
+            <p><br></p>
+          </div>
+        </header>
 
-        <!--slick service-->
-        <div class="service__slider">
-          <div class="slick-content">
+        <main>
+          <!--slick service-->
+          <div class="slick-list">
+
             <div class="item">
-              <i class="fa fa-dice-d6"></i>
-              <p>APP MOBILE<br>DEVELOPMENT</p>
+              <div class="content">
+                <i class="fa fa-dice-d6"></i>
+                <p>APP MOBILE<br>DEVELOPMENT</p>
+              </div>   
             </div>
 
             <div class="item">
-              <i class="fab fa-autoprefixer"></i>
-              <p>DIGITAL<br> MARKETING</p>
+              <div class="content">
+                <i class="fab fa-autoprefixer"></i>
+                <p>DIGITAL<br> MARKETING</p>
+              </div>              
             </div>
 
             <div class="item">
-              <i class="fab fa-500px"></i>
-              <p>SEO &amp; CONTENT <br>WRITTING</p>
+              <div class="content">
+                <i class="fab fa-500px"></i>
+                <p>SEO &amp; CONTENT <br>WRITTING</p>
+              </div>             
             </div>
 
             <div class="item">
-              <i class="fa fa-blog"></i>
+              <div class="content">
+                <i class="fa fa-blog"></i>
               <p>
                 WEBSITE<br>DEVELOPMENT
               </p>
+              </div>             
             </div>
 
             <div class="item">
-              <i class="fab fa-battle-net"></i>
+              <div class="content">
+                <i class="fab fa-battle-net"></i>
               <p>
                 SEO &amp; CONTENT <br>WRITTING
               </p>
+              </div>              
             </div>
 
             <div class="item">
-              <i class="fa fa-memory"></i>
+              <div class="content">
+                <i class="fa fa-memory"></i>
               <p>
                 APP MOBILE<br>DEVELOPMENT
               </p>
+              </div>            
             </div>
           </div>
-        </div>
-      </div>
+        </main>      
+      </div>     
     </section>
 
     <!--ShowCase-->
-    <section class="showcase">
-      <div class="title title--black">
-        <p>OUR PORTFOLIO</p>
-        <h2>WORK SHOWCASE</h2>
-        <p>We are committed to providing our customers with exceptional service while offering our
-          <br>
-          employees the best training
-        </p>
-      </div>
+    <section id="showcase" class="showcase">
+      <div class="container">
+        <header>
+            <!--Title showcase-->
+          <div class="title title--black">
+            <p>OUR PORTFOLIO</p>
+            <h2>WORK SHOWCASE</h2>
+            <p>We are committed to providing our customers with exceptional service while offering our
+              <br>
+              employees the best training
+            </p>
+          </div>
+        </header>
 
-      <div class="showcase__content">
-        <!--Showcase-Container-->
-        <div class="showcase__container" id="lightgallery">
-          <!--Showcase-Item-->
-          <div class="showcase__item mix app">
-            <img src="" alt="">
-            <div class="showcase__overlay">
-              <div class="showcase__icons">
-                <a>
-                  <i class="fa fa-search-plus"></i>
-                </a>
-                <br>
+        <main>
+           <!--Showcase-Container-->
+          <div class="showcase__container" id="lightgallery">
+            <!--Showcase-Item-->
+            <div class="showcase__item mix app">
+              <!--Content-->
+              <div class="content">
+                <img src="./assets/img/showcase_img_1.webp" alt="">
+                <!--Overlay Pink-->
+                <div class="showcase__overlay">
+                  <div class="showcase__icons">
+                    <a>
+                      <i class="fa fa-search-plus"></i>
+                    </a>
+                    
 
-                <a href="">
-                  <i class="fa fa-link"></i>
-                </a>
-              </div>
-              
-              <div class="showcase__text">
-                <p>LOGO</p>
-                <h3>FLIPPIN BIRD</h3>
+                    <a href="">
+                      <i class="fa fa-link"></i>
+                    </a>
+                  </div>
+                  
+                  <div class="showcase__text">
+                    <p>LOGO</p>
+                    <h3>FLIPPIN BIRD</h3>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="showcase__item mix illus">
-            <img src="" alt="">
-            <div class="showcase__overlay">
-              <div class="showcase__icons">
-                <a>
-                  <i></i>
-                </a>
-                <br>
-                <a>
-                  <i></i>
-                </a>
-              </div>
-              
-              <div class="showcase__text">
-                <p></p>
-                <h3></h3>
+            <div class="showcase__item mix illus">
+              <div class="content">
+                <img src="./assets/img/showcase_img_2.webp" alt="">
+                <div class="showcase__overlay">
+                  <div class="showcase__icons">
+                    <a>
+                      <i class="fa fa-search-plus"></i>
+                    </a>
+                    
+                    <a>
+                      <i class="fa fa-link"></i>
+                    </a>
+                  </div>
+                  
+                  <div class="showcase__text">
+                    <p>LOGO</p>
+                    <h3>FLIPPIN BIRD</h3>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="showcase__item mix logo">
-            <img src="" alt="">         
-            <div class="showcase__overlay">
-              <div class="showcase__icons">
-                <a>
-                  <i></i>
-                </a>
-                <br>
-                <a>
-                  <i></i>
-                </a>
-              </div>
-              
-              <div class="showcase__text">
-                <p></p>
-                <h3></h3>
-              </div>
+            <div class="showcase__item mix logo">
+                <div class="content">
+                  <img src="./assets/img/showcase_img_3.webp" alt="">         
+                  <div class="showcase__overlay">
+                    <div class="showcase__icons">
+                      <a>
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                      
+                      <a>
+                        <i class="fa fa-link"></i>
+                      </a>
+                    </div>
+                    
+                    <div class="showcase__text">
+                      <p>LOGO</p>
+                      <h3>FLIPPIN BIRD</h3>
+                    </div>
+                  </div>
+                </div>
             </div>
-          </div>
 
-          <div class="showcase__item mix app">
-            <img src="" alt="">         
-            <div class="showcase__overlay">
-              <div class="showcase__icons">
-                <a>
-                  <i></i>
-                </a>
-                <br>
-                <a>
-                  <i></i>
-                </a>
-              </div>
-              
-              <div class="showcase__text">
-                <p></p>
-                <h3></h3>
-              </div>
+            <div class="showcase__item mix app">
+                <div class="content">
+                  <img src="./assets/img/showcase_img_5.webp" alt="">         
+                  <div class="showcase__overlay">
+                    <div class="showcase__icons">
+                      <a>
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                      
+                      <a>
+                        <i class="fa fa-link"></i>
+                      </a>
+                    </div>
+                    
+                    <div class="showcase__text">
+                      <p>LOGO</p>
+                      <h3>FLIPPIN BIRD</h3>
+                    </div>
+                  </div>
+                </div>
             </div>
-          </div>
 
-          <div class="showcase__item mix music">
-            <img src="" alt="">        
-            <div class="showcase__overlay">
-              <div class="showcase__icons">
-                <a>
-                  <i></i>
-                </a>
-                <br>
-                <a>
-                  <i></i>
-                </a>
-              </div>
-              
-              <div class="showcase__text">
-                <p></p>
-                <h3></h3>
-              </div>
+            <div class="showcase__item mix music">
+                <div class="content">
+                  <img src="./assets/img/showcase_img_6.webp" alt="">        
+                  <div class="showcase__overlay">
+                    <div class="showcase__icons">
+                      <a>
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                      
+                      <a>
+                        <i class="fa fa-link"></i>
+                      </a>
+                    </div>
+                    
+                    <div class="showcase__text">
+                      <p>LOGO</p>
+                      <h3>FLIPPIN BIRD</h3>
+                    </div>
+                  </div>
+                </div>
             </div>
-          </div>
 
-          <div class="showcase__item mix logo">
-            <img src="" alt="">        
-            <div class="showcase__overlay">
-              <div class="showcase__icons">
-                <a>
-                  <i></i>
-                </a>
-                <br>
-                <a>
-                  <i></i>
-                </a>
-              </div>
-              
-              <div class="showcase__text">
-                <p></p>
-                <h3></h3>
-              </div>
+            <div class="showcase__item mix logo">
+                <div class="content">
+                  <img src="./assets/img/showcase_img_7.webp" alt="">        
+                  <div class="showcase__overlay">
+                    <div class="showcase__icons">
+                      <a>
+                        <i class="fa fa-search-plus"></i>
+                      </a>                     
+                      <a>
+                        <i class="fa fa-link"></i>
+                      </a>
+                    </div>
+                    
+                    <div class="showcase__text">
+                      <p>LOGO</p>
+                      <h3>FLIPPIN BIRD</h3>
+                    </div>
+                  </div>
+                </div>
             </div>
+              
+            <!--EndItem-->
           </div>
-
-        </div>
-      </div>
+        </main>            
+      </div>     
     </section>
 
     <!--Blog-->
-    <section class="blog">
-      <div class="title title--black">
-        <p>OUR PORTFOLIO</p>
-        <h2>WORK SHOWCASE</h2>
-        <p>We are committed to providing our customers with exceptional service while offering our
-          <br>
-          employees the best training
-        </p>
-      </div>
-
-      <!--Blog content-->
-      <div class="blog__content">
-        <!--blog Item-->
-        <div class="blog__item blog__metro1">
-          <img src="" alt="">
-          <div class="blog__overlay">
-            <p>November 10, 2021 | Life Style</p>
-            <h3>1950s up to now Pop Music Defined</h3>
+    <section id="blog" class="blog">
+        <header>
+          <div class="title title--black">
+            <p>OUR PORTFOLIO</p>
+            <h2>WORK SHOWCASE</h2>
+            <p>We are committed to providing our customers with exceptional service while offering our
+              <br>
+              employees the best training
+            </p>
           </div>
-        </div>
+        </header>
 
-        <div class="blog__item">
-          <img src="" alt="">
-          <div class="blog__overlay">
-            <p>November 10, 2021 | Life Style</p>
-            <h3>1950s up to now Pop Music Defined</h3>
-          </div>
-        </div>
+        <main>
+          <!--Blog content-->
+          <div class="blog__list">
+            <!--blog Item-->
+            <div class="blog__item blog__metro1">
+              <div class="blog__content">
+                <!--Figure-->
+                <div class="blog__overlay"></div>
+                <figure>
+                  <img src="./assets/img/grid-metro-1.jpg" alt="">
+                  <figcaption>
+                    <p>May 21, 2021 | life style</p>
+                    <h1>1950s up to now Pop Music Defined</h1>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>  
 
-        <div class="blog__item">
-          <img src="" alt="">
-          <div class="blog__overlay">
-            <p>November 10, 2021 | Life Style</p>
-            <h3>1950s up to now Pop Music Defined</h3>
-          </div>
-        </div>
+            <div class="blog__item blog__metro1">
+              <div class="blog__content">
+                <!--Figure-->
+                <div class="blog__overlay"></div>
+                <figure>
+                  <img src="./assets/img/grid-metro-2.jpg" alt="">
+                  <figcaption>
+                    <p>May 21, 2021 | life style</p>
+                    <h1>1950s up to now Pop Music <br />    Defined</h1>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>  
 
-        <div class="blog__item">
-          <img src="" alt="">
-          <div class="blog__overlay">
-            <p>November 10, 2021 | Life Style</p>
-            <h3>1950s up to now Pop Music Defined</h3>
-          </div>
-        </div>
+            <div class="blog__item blog__metro1">
+              <div class="blog__content">
+                <!--Figure-->
+                <div class="blog__overlay"></div>
+                <figure>
+                  <img src="./assets/img/grid-metro-3.jpg" alt="">
+                  <figcaption>
+                    <p>May 21, 2021 | life style</p>
+                    <h1>1950s up to now Pop Music <br />      Defined</h1>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>   
 
-        <div class="blog__item">
-          <img src="" alt="">
-          <div class="blog__overlay">
-            <p>November 10, 2021 | Life Style</p>
-            <h3>1950s up to now Pop Music Defined</h3>
-          </div>
-        </div>
+            <div class="blog__item blog__metro1">
+              <div class="blog__content">
+                <!--Figure-->
+                <div class="blog__overlay"></div>
+                <figure>
+                  <img src="./assets/img/grid-metro-4.jpg" alt="">
+                  <figcaption>
+                    <p>May 21, 2021 | life style</p>
+                    <h1>1950s up to now Pop Music Defined</h1>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>   
 
-        <div class="blog__item">
-          <img src="" alt="">
-          <div class="blog__overlay">
-            <p>November 10, 2021 | Life Style</p>
-            <h3>1950s up to now Pop Music Defined</h3>
-          </div>
-        </div>
+            <div class="blog__item blog__metro1">
+              <div class="blog__content">
+                <!--Figure-->
+                <div class="blog__overlay"></div>
+                <figure>
+                  <img src="./assets/img/grid-metro-5.jpg" alt="">
+                  <figcaption>
+                    <p>May 21, 2021 | life style</p>
+                    <h1>1950s up to now Pop Music Defined</h1>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>     
 
-        <div class="blog__item">
-          <img src="" alt="">
-          <div class="blog__overlay">
-            <p>November 10, 2021 | Life Style</p>
-            <h3>1950s up to now Pop Music Defined</h3>
-          </div>
-        </div>
+            <div class="blog__item blog__metro1">
+              <div class="blog__content">
+                <!--Figure-->
+                <div class="blog__overlay"></div>
+                <figure>
+                  <img src="./assets/img/grid-metro-6.jpg" alt="">
+                  <figcaption>
+                    <p>May 21, 2021 | life style</p>
+                    <h1>1950s up to now Pop Music Defined</h1>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>    
 
-        <div class="blog__item">
-          <img src="" alt="">
-          <div class="blog__overlay">
-            <p>November 10, 2021 | Life Style</p>
-            <h3>1950s up to now Pop Music Defined</h3>
-          </div>
-        </div>
+            <div class="blog__item blog__metro1">
+              <div class="blog__content">
+                <!--Figure-->
+                <div class="blog__overlay"></div>
+                <figure>
+                  <img src="./assets/img/grid-metro-7.jpg" alt="">
+                  <figcaption>
+                    <p>May 21, 2021 | life style</p>
+                    <h1>1950s up to now Pop Music Defined</h1>
+                  </figcaption>
+                </figure>
+              </div>
+            </div> 
 
-        <div class="blog__item">
-          <img src="" alt="">
-          <div class="blog__overlay">
-            <p>November 10, 2021 | Life Style</p>
-            <h3>1950s up to now Pop Music Defined</h3>
-          </div>
-        </div>
+            <div class="blog__item blog__metro1">
+              <div class="blog__content">
+                <!--Figure-->
+                <div class="blog__overlay"></div>
+                <figure>
+                  <img src="./assets/img/grid-metro-8.jpg" alt="">
+                  <figcaption>
+                    <p>May 21, 2021 | life style</p>
+                    <h1>1950s up to now Pop Music Defined</h1>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>  
 
-        <div class="blog__item blog__metro10">
-          <img src="" alt="">
-          <div class="blog__overlay">
-            <p>November 10, 2021 | Life Style</p>
-            <h3>1950s up to now Pop Music Defined</h3>
+            <div class="blog__item blog__metro1">
+              <div class="blog__content">
+                <!--Figure-->
+                <div class="blog__overlay"></div>
+                <figure>
+                  <img src="./assets/img/grid-metro-9.jpg" alt="">
+                  <figcaption>
+                    <p>May 21, 2021 | life style</p>
+                    <h1>1950s up to now Pop Music Defined</h1>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>   
+
+            <div class="blog__item blog__metro1">
+              <div class="blog__content">
+                <!--Figure-->
+                <div class="blog__overlay"></div>
+                <figure>
+                  <img src="./assets/img/grid-metro-10.jpg" alt="">
+                  <figcaption>
+                    <p>May 21, 2021 | life style</p>
+                    <h1>1950s up to now Pop Music Defined</h1>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>           
           </div>
-        </div>
-      </div>
+        </main>
+
+      
+   
     </section>
 
     <!--Number-->
-    <section class="number">
+    <section id="number" class="number">
       <div class="number__content">
         <div class="number__item">
           <p class="counter">8,705</p>
@@ -408,7 +507,7 @@
     </section>
 
     <!--Trust-->
-    <section class="trust">
+    <section  class="trust">
       <div class="trust__content">
         <div class="trust__left">
           <img src="./assets/img/trusted__img_1.jpg" alt="">
@@ -427,45 +526,48 @@
     </section>
 
     <!--Experience-->
-    <section class="experience">
-      <div class="title">
-        <p></p>
-        <h2></h2>
-        <p></p>
-      </div>
+    <section class="experience">   
+      <!--Container-->
+      <div class="container">
+        <header>
+          <h1></h1>
+          <p></p>
+        </header>
 
-      <div class="experience__content">
-        <video controls poster="./assets/img/home_slider.jpg">
-          <source src="./assets/video/video.mp4" type="video/mp4">
-          Your browser doesn't support HTML5 video tag.
-        </video>
+        <main >
+          <video controls width="100%" src="./assets/video/video.mp4"></video>
+
+          <iframe width="100%" height="506" src="https://www.youtube.com/embed/PKveQsebx3I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </main>
       </div>
     </section>
 
     <!--Contact-->
-    <section class="contact">
-      <div class="title title--black">
-        <p>OUR PORTFOLIO</p>
-        <h2>WORK SHOWCASE</h2>
-        <p>We are committed to providing our customers with exceptional service while offering our
-          <br>
-          employees the best training
-        </p>
-      </div>
+    <section id="contact" class="contact">
+      <div class="container">
+        <header>
+          <h1></h1>
+          <p></p>
+        </header>
 
-      <div class="contact__content">
-        <div class="contact__map">
-          <iframe src="" frameborder="0"></iframe>
-        </div>
+        <!-- Main content-->
+        <main>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d62694.933383631!2d106.7206566551778!3d10.854608470658166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1636380541446!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
 
-        <div class="contact__form">
-          <form action="">
+          <form class="form" action="">
             <input type="text" placeholder="Username">
-            <input type="email" placeholder="Email Address">
-            <textarea placeholder="Ask a Question ... " name="" id="" cols="30" rows="10"></textarea>
-            <button class="btnMei">SUBMIT</button>
+            <input type="number">
+            <input type="date">
+            <input type="file">
+            <input type="email" placeholder="EmailAddress">
+            <input type="radio" name="gender">Nam
+            <input type="radio" name="gender">Nữ
+            <textarea name="" id="" cols="100" rows="10" placeholder="Message"></textarea>
+            <button>Submit</button>
           </form>
-        </div>
+        </main>
       </div>
     </section>
 

@@ -1,1 +1,43 @@
 Ở bài này chúng ta sẽ code một trang web sử dụng HMTL5 và CSS3
+
+background xiu chúng ta sẽ cho nó đè lên  header
+Nếu màn hình lớn hơn 1280 thì màn hình max-width sẽ là 1280px còn nếu nhỏ hơn thì nó sẽ tự đọng thu nhỏ lại
+
+
+space-around thì tất cả các phần tử con đều cách đều nhau hết
+
+align-items: set thằng con nằm chính giữa thẻ cha theo chiều cao
+
+justify-content: sắp xếp các phần tử con theo trục chính
+
+để cho thằng carousel chiếm chỗ header thì chúng ta phải đẩy thz header ra khỏi chỗ của nó dang đứng
+
+khi cho header biến ra khỏi phần trục đầu thì nó sẽ mất kích thước chiều rộng widht: nên chúng ta sẽ set lại width: 100% cho nó
+
+background-color: ko nên để ở item chỉ nên để nó ở content
+
+mặc định là các thẻ con khi flex rồi thì nó vẫn chúng một hàng nên cho dù có 100 tấm hình thì nó vẫn chen chút nhau trên một hàng -> nên ở đây chúng ta sẽ dùng flex-wrap
+
+khi mà wrap tụi nó lại rồi thì những tấm hình nó lại tràn ra thì chúng ta phải set lại width cho tấm hình là 100%
+
+
+align-items: sắp xếp theo trục phụ
+
+header còn là phần mở đầu của section không chỉ là phần mở đầu của trang web
+
+Nội dung chính của một section thì bọc nó trong thẻ main
+
+Mặc định cái hình là inline-block nên chúng ta ép kiểu nó lên là block
+
+Ban đầu thằng showcase__overlay là display none rê chuột vào thì là display: flex; -> tốt nhất là nên hover vào thằng cha rồi mình chỉnh
+
+//////////////////////////////////////////
+
+Kéo caption lên nằm chung với hình
+
+
+Trong trường hợp chúng ta muốn kéo video từ youtube này qua
+
+file checkbox thường dùng để tick vào những nhiều việc có liên quan đến mình
+
+Nếu như cái button nằm ngoài cái form thì cái type sẽ là button,, Còn cái button nằm trong cái form thì cái type sẽ là submit -> sau khi nhấn thì nó sẽ gửi dữ liệu đi

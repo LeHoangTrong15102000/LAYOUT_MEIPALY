@@ -7,9 +7,10 @@
 
 body {
   font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: normal;
   /* background-color: $body-color; */
+  position: relative;
 }
 
 html {
@@ -29,14 +30,268 @@ li {
   list-style-type: none;
 }
 
+.container {
+  max-width: 106rem;
+  margin: auto;
+  padding: 0 0.5rem;
+}
+
+.header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 2.3rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header .container {
+  display: flex;
+  width: 75%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+}
+.header .header__logo {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+.header .header__logo:hover {
+  color: #e62b4a;
+  transition: all 0.2s ease;
+}
+.header .navbar a:first-child {
+  color: #e62b4a;
+}
+.header .navbar a {
+  color: #fff;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-right: 1.25rem;
+}
+.header .navbar a:hover {
+  color: #e62b4a;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.header .navbar a:not(:last-child) {
+  margin-right: 5rem;
+}
+
 .carousel {
   background-image: url(../img/home_slider.jpg);
   background-size: cover;
   background-position: center;
   height: 65rem;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+.carousel .carousel__content {
+  text-align: center;
+}
+.carousel .carousel__content h1 {
+  font-size: 7.5rem;
+  color: #fff;
+  font-weight: 700;
+  line-height: 9rem;
+  margin-top: -0.1rem;
+}
+.carousel .carousel__content p {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #fff;
+}
+.carousel .carousel__content button {
+  padding: 0.75rem 2rem;
+  background-color: #e62b4a;
+  color: #fff;
+}
+.carousel .carousel__content button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.carousel .carousel__content i {
+  margin-top: 1.2rem;
+}
+
+.service {
+  background-color: #000;
+  height: 50rem;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+.service .title {
+  color: white;
+}
+.service .title p:nth-child(1) {
+  color: #e62b4a;
+}
+.service .slick-list {
+  display: flex;
+  height: 100%;
+}
+.service .slick-list .item {
+  width: 20%;
+  padding: 0 0.7rem;
+}
+.service .slick-list .item .content {
+  background-color: #fff;
+  padding: 7rem 1.8rem;
+}
+.service .slick-list .item .content p {
+  font-size: 1.5rem;
+}
+
+.showcase {
+  margin-top: 5rem;
+}
+.showcase header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.showcase .title {
+  padding: 0 0.7rem;
+}
+.showcase .showcase__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.showcase .showcase__container .showcase__item {
+  width: 33.3333333333%;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+.showcase .showcase__container .showcase__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(50%);
+  display: block;
+}
+.showcase .showcase__container .showcase__item .content {
+  position: relative;
+}
+.showcase .showcase__container .showcase__item .content .showcase__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(230, 43, 74, 0.6);
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  display: none;
+}
+.showcase .showcase__container .showcase__item .content .showcase__overlay .showcase__icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.showcase .showcase__container .showcase__item .content .showcase__overlay .showcase__icons i {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  background-color: #fff;
+  text-align: center;
+  line-height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.showcase .showcase__container .showcase__item .content .showcase__overlay .showcase__icons i:hover {
+  background-color: #000;
+  transition: all 0.5s linear;
+  color: #fff;
+}
+.showcase .showcase__container .showcase__item .content .showcase__overlay .showcase__icons i i:nth-of-type(1) {
+  margin-top: -5rem;
+}
+.showcase .showcase__container .showcase__item .content .showcase__overlay .showcase__text p {
+  color: #ccc;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.showcase .showcase__container .showcase__item .content .showcase__overlay .showcase__text h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.showcase .showcase__container .showcase__item .content:hover .showcase__overlay {
+  display: flex;
+  transition: all 0.7s linear;
+}
+
+.blog header {
+  text-align: center;
+  height: 20rem;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.blog .blog__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.blog .blog__list .blog__item:first-child {
+  grid-column: 1/span 2;
+  grid-row: 1/span 2;
+}
+.blog .blog__list .blog__item:last-child {
+  grid-column: 3/span 2;
+  grid-row: 3/span 2;
+}
+.blog .blog__list .blog__content {
+  position: relative;
+}
+.blog .blog__list .blog__content img {
+  width: 100%;
+  display: block;
+}
+.blog .blog__list .blog__content figure {
+  position: relative;
+}
+.blog .blog__list .blog__content figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 110;
+}
+.blog .blog__list .blog__content figcaption p {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.blog .blog__list .blog__content figcaption h1 {
+  font-size: 2rem;
+}
+.blog .blog__list .blog__content .blog__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.experience {
+  padding: 12rem 0;
+  background-image: url(../img/bussiness_img_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.contact {
+  padding: 12rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
