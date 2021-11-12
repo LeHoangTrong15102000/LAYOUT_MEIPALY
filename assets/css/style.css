@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Roboto-Black", sans-serif;
+  src: url(../font/Roboto-Black.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -115,7 +119,10 @@ li {
   transition: all 0.3s ease;
 }
 .carousel .carousel__content i {
-  margin-top: 1.2rem;
+  margin-top: 4rem;
+  color: #fff;
+  font-size: 3rem;
+  animation: fade 1s infinite normal ease;
 }
 
 .service {
@@ -141,9 +148,28 @@ li {
 .service .slick-list .item .content {
   background-color: #fff;
   padding: 7rem 1.8rem;
+  height: 18rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .service .slick-list .item .content p {
   font-size: 1.5rem;
+}
+.service .slick-list .item .content::after {
+  content: "";
+  width: 0.5rem;
+  height: 0;
+  background-color: #e62b4a;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: height 0.2s linear;
+}
+.service .slick-list .item .content:hover::after {
+  height: 100%;
 }
 
 .showcase {
@@ -174,6 +200,7 @@ li {
 }
 .showcase .showcase__container .showcase__item .content {
   position: relative;
+  box-shadow: 2px 2px 1rem rgba(0, 0, 0, 0.5);
 }
 .showcase .showcase__container .showcase__item .content .showcase__overlay {
   position: absolute;
@@ -185,12 +212,18 @@ li {
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem;
-  display: none;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s linear;
 }
 .showcase .showcase__container .showcase__item .content .showcase__overlay .showcase__icons {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  position: relative;
+  top: 1rem;
+  transition: all 0.3s linear;
 }
 .showcase .showcase__container .showcase__item .content .showcase__overlay .showcase__icons i {
   width: 2.5rem;
@@ -209,6 +242,11 @@ li {
 .showcase .showcase__container .showcase__item .content .showcase__overlay .showcase__icons i i:nth-of-type(1) {
   margin-top: -5rem;
 }
+.showcase .showcase__container .showcase__item .content .showcase__overlay .showcase__text {
+  position: relative;
+  top: 1rem;
+  transition: all 0.3s linear;
+}
 .showcase .showcase__container .showcase__item .content .showcase__overlay .showcase__text p {
   color: #ccc;
   font-size: 1.4rem;
@@ -220,8 +258,15 @@ li {
   font-size: 1.5rem;
   font-weight: 600;
 }
+.showcase .showcase__container .showcase__item .content .showcase__overlay:hover .showcase__icons {
+  top: 0;
+}
+.showcase .showcase__container .showcase__item .content .showcase__overlay:hover .showcase__text {
+  top: 0;
+}
 .showcase .showcase__container .showcase__item .content:hover .showcase__overlay {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
   transition: all 0.7s linear;
 }
 
@@ -248,10 +293,13 @@ li {
 }
 .blog .blog__list .blog__content {
   position: relative;
+  overflow: hidden;
 }
 .blog .blog__list .blog__content img {
   width: 100%;
   display: block;
+  transform: scale(1);
+  transition: all 0.2s linear;
 }
 .blog .blog__list .blog__content figure {
   position: relative;
@@ -280,6 +328,9 @@ li {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
 }
+.blog .blog__list .blog__content:hover img {
+  transform: scale(1.2);
+}
 
 .experience {
   padding: 12rem 0;
@@ -292,6 +343,64 @@ li {
 
 .contact {
   padding: 12rem 0;
+}
+.contact header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.contact header h2 {
+  margin-bottom: 3rem;
+  font-size: 5rem;
+  font-weight: 400;
+}
+.contact .contact__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto 0;
+  width: 100%;
+}
+.contact .contact__content .contact__map {
+  width: 60%;
+  height: 100%;
+}
+.contact .contact__content .contact__map iframe {
+  width: 100%;
+}
+.contact .contact__content .contact__form {
+  width: 40%;
+}
+.contact .contact__content .contact__form form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+}
+.contact .contact__content .contact__form input,
+.contact .contact__content .contact__form textarea {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #888;
+  border-radius: 2px;
+  margin-bottom: 3rem;
+}
+.contact .contact__content .contact__form .btnMei {
+  padding: 2rem 1rem;
+  background-color: black;
+  color: white;
+  letter-spacing: 2px;
+}
+.contact .contact__content .contact__form .btnMei:hover {
+  cursor: pointer;
+  background-color: #e62b4a;
+  transition: all 0.3s linear;
+  border: 1px solid transparent;
+}
+
+@keyframes fade {
+  100% {
+    opacity: 0;
+    transform: translate(0, 100%);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

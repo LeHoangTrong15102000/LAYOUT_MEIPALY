@@ -1,9 +1,15 @@
+@font-face {
+  font-family: "Roboto-Black", sans-serif;
+  src: url(../font/Roboto-Black.ttf);
+}
+
 $primary-color: #e62b4a;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  // font-family: "Roboto-Black", sans-serif;
 }
 
 body {
@@ -132,7 +138,10 @@ li {
     }
 
     & i {
-      margin-top: 1.2rem;
+      margin-top: 4rem;
+      color: #fff;
+      font-size: 3rem;
+      animation: fade 1s infinite normal ease;
     }
   }
 }
@@ -163,9 +172,33 @@ li {
       & .content {
         background-color: #fff;
         padding: 7rem 1.8rem;
+        height: 18rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         & p {
           font-size: 1.5rem;
+        }
+
+        &::after {
+          // cái quan trọng khi sử dụng after và before;
+          content: "";
+          width: 0.5rem;
+          height: 0;
+          background-color: $primary-color;
+          position: absolute;
+          top: 0;
+          right: 0;
+          // tăng độ mượt cho thanh trượt đỏ
+          transition: height 0.2s linear;
+        }
+
+        &:hover::after {
+          // bằng chiều cao của thẻ cha chứa nó
+          height: 100%;
         }
       }
     }
@@ -205,6 +238,7 @@ li {
 
       & .content {
         position: relative;
+        box-shadow: 2px 2px 1rem rgba(0, 0, 0, 0.5);
 
         & .showcase__overlay {
           position: absolute;
@@ -217,12 +251,20 @@ li {
           flex-direction: column;
           justify-content: space-between;
           padding: 2rem;
-          display: none;
+          display: flex;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.2s linear;
 
           & .showcase__icons {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+
+            // dùng position relative cho thẻ icons, tại vì nó không phụ thuộc vào thẻ nào
+            position: relative;
+            top: 1rem;
+            transition: all 0.3s linear;
 
             & i {
               width: 2.5rem;
@@ -246,6 +288,10 @@ li {
           }
 
           & .showcase__text {
+            position: relative;
+            top: 1rem;
+            transition: all 0.3s linear;
+
             & p {
               color: #ccc;
               font-size: 1.4rem;
@@ -259,10 +305,20 @@ li {
               font-weight: 600;
             }
           }
+
+          &:hover .showcase__icons {
+            top: 0;
+          }
+
+          &:hover .showcase__text {
+            top: 0;
+          }
         }
 
         &:hover .showcase__overlay {
-          display: flex;
+          opacity: 1;
+          visibility: visible;
+          // display: flex;
           transition: all 0.7s linear;
         }
       }
@@ -298,9 +354,12 @@ li {
     }
     & .blog__content {
       position: relative;
+      overflow: hidden;
       & img {
         width: 100%;
         display: block;
+        transform: scale(1);
+        transition: all 0.2s linear;
       }
 
       & figure {
@@ -334,6 +393,10 @@ li {
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 100;
       }
+
+      &:hover img {
+        transform: scale(1.2);
+      }
     }
   }
 }
@@ -349,4 +412,75 @@ li {
 
 .contact {
   padding: 12rem 0;
+
+  & header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    & h2 {
+      margin-bottom: 3rem;
+      font-size: 5rem;
+      font-weight: 400;
+    }
+  }
+
+  & .contact__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem auto 0;
+    width: 100%;
+
+    & .contact__map {
+      width: 60%;
+      height: 100%;
+
+      & iframe {
+        width: 100%;
+      }
+    }
+
+    & .contact__form {
+      // margin-left: 2rem;
+      width: 40%;
+
+      & form {
+        display: flex;
+        flex-direction: column;
+        // align-items: flex-start;
+        // justify-content: space-between;
+        padding: 0 1.5rem;
+      }
+
+      & input,
+      textarea {
+        font-size: 1.5rem;
+        padding: 1rem;
+        border: 1px solid #888;
+        border-radius: 2px;
+        margin-bottom: 3rem;
+      }
+
+      & .btnMei {
+        padding: 2rem 1rem;
+        background-color: black;
+        color: white;
+        letter-spacing: 2px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $primary-color;
+          transition: all 0.3s linear;
+          border: 1px solid transparent;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  100% {
+    opacity: 0;
+    transform: translate(0, 100%);
+  }
 }

@@ -38,6 +38,54 @@ Kéo caption lên nằm chung với hình
 
 Trong trường hợp chúng ta muốn kéo video từ youtube này qua
 
+// Ở Contact;
+
 file checkbox thường dùng để tick vào những nhiều việc có liên quan đến mình
 
 Nếu như cái button nằm ngoài cái form thì cái type sẽ là button,, Còn cái button nằm trong cái form thì cái type sẽ là submit -> sau khi nhấn thì nó sẽ gửi dữ liệu đi
+
+
+/// Chỉnh hiệu ứng cho trang web, ở showcase
+
+thêm after vào content thì tất cả các content đều có after;
+
+opacity phải kết hợp với visibility: hidden
+
+
+muốn nhìn thấy sự thay đổi mượt mà của tụi nó thì phải gắn cho nó transition
+
+Ngoài position để tạo hiệu ứng khi chạy transition chúng ta còn có thể sử dụng transform: translate
+
+// Ở blog post
+
+khi các phần tử được scale lên mà nó lòi ra ngoài thì chúng ta sẽ cho nó overflow: hidden;
+
+// Note Grid 
+    chỉ hãy dùng Grid chỉ khi khách hàng chúng ta đảm bảo rằng họ luôn dùng những trình duyệt web  mới nhất 
+
+    Nhưng đa phần trình duyệt bây giờ đều sử dụng các phiên bản có hỗ trợ grid nên chúng ta có thể sử dụng
+
+// Animation
+
+    - Nếu đã có infinite thì ko sử dụng animation-direction và fill-mode
+
+    - Ngoài ra còn có thể sử dụng thư viện hiệu ứng -> animate css
+
+    - Ngoài ra còn có một thư viện đi chung với aniamte css là -> wow js
+
+    - Có những nhược điểm là hiệu ứng nó sẽ chạy trước, khi mà ta lăn chuột xuống
+
+    - Thư viện wow js không cho chúng ta sử dụng cdn thì chúng ta sẽ tải source wow js về
+
+    - Chỗ nào đang gắn animate css thì gắn thêm class="wow" cho nó -> khi người ta lăn chuột vào hiệu ứng thì nó chạy.
+
+    - Lăn xuống nhưng chỉ một lần -> chừng nào reset lại trang web thì nó mới có hiệu ứng lại lần nữa
+
+// Note 
+
+    - Những dự án lớn thì chỉ focus vào chức năng(javascript)
+
+// Có thể dùng file chứa các animation riêng trong một dự án
+
+
+// Buổi tiếp theo chúng ta sẽ làm Responsive và Bootstrap
