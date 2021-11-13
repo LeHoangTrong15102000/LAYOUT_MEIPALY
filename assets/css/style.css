@@ -41,7 +41,7 @@ li {
 }
 
 .header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   padding: 2.3rem 0;
   position: absolute;
   top: 0;
@@ -87,7 +87,7 @@ li {
   background-image: url(../img/home_slider.jpg);
   background-size: cover;
   background-position: center;
-  height: 65rem;
+  height: 59rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -109,9 +109,11 @@ li {
   color: #fff;
 }
 .carousel .carousel__content button {
-  padding: 0.75rem 2rem;
+  padding: 1.3rem 2.8rem;
   background-color: #e62b4a;
   color: #fff;
+  border: 1px solid transparent;
+  letter-spacing: 1px;
 }
 .carousel .carousel__content button:hover {
   opacity: 0.7;
@@ -127,15 +129,30 @@ li {
 
 .service {
   background-color: #000;
-  height: 50rem;
+  height: 64rem;
   padding: 1.5rem 0;
   text-align: center;
 }
 .service .title {
   color: white;
+  margin-top: 7rem;
 }
-.service .title p:nth-child(1) {
+.service .title p:first-of-type {
   color: #e62b4a;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+.service .title h2 {
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+.service .title p:last-of-type {
+  color: #888;
+  margin-bottom: 2.5rem;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1.2px;
 }
 .service .slick-list {
   display: flex;
@@ -148,15 +165,20 @@ li {
 .service .slick-list .item .content {
   background-color: #fff;
   padding: 7rem 1.8rem;
-  height: 18rem;
+  height: 20rem;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #888;
 }
 .service .slick-list .item .content p {
   font-size: 1.5rem;
+  line-height: 2rem;
+}
+.service .slick-list .item .content i {
+  font-size: 4.5rem;
 }
 .service .slick-list .item .content::after {
   content: "";
@@ -173,14 +195,30 @@ li {
 }
 
 .showcase {
-  margin-top: 5rem;
+  margin-top: 8rem;
+  height: 60rem;
 }
 .showcase header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 .showcase .title {
   padding: 0 0.7rem;
+}
+.showcase .title p:first-of-type {
+  font-size: 1.4rem;
+  color: #888;
+  margin-bottom: 1.3rem;
+}
+.showcase .title h2 {
+  font-size: 4.5rem;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+}
+.showcase .title p:last-of-type {
+  color: #888894;
+  font-weight: 500;
+  line-height: 2.5rem;
 }
 .showcase .showcase__container {
   display: flex;
@@ -270,14 +308,33 @@ li {
   transition: all 0.7s linear;
 }
 
+.blog {
+  margin-top: 22rem;
+  background-color: #f3f3f3;
+  height: 178rem;
+}
 .blog header {
   text-align: center;
-  height: 20rem;
-  background-color: #f3f3f3;
+  height: 31rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.blog header .title p:first-of-type {
+  color: #888;
+  font-size: 1.4rem;
+}
+.blog header .title h2 {
+  font-size: 4.5rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
+.blog header .title p:last-of-type {
+  font-weight: 500;
+  color: #888894;
+  line-height: 2.5rem;
 }
 .blog .blog__list {
   display: grid;
@@ -325,7 +382,7 @@ li {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(94, 89, 89, 0.5);
   z-index: 100;
 }
 .blog .blog__list .blog__content:hover img {
