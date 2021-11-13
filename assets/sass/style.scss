@@ -5,6 +5,24 @@
 
 $primary-color: #e62b4a;
 
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flexbox(
+  $align: flex-start,
+  $justify: flex-start,
+  $flex-direction: row,
+  $wrap: nowrap
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+  flex-wrap: $wrap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -478,6 +496,65 @@ li {
   }
 }
 
+.footer {
+  background-color: #000;
+  height: 100%;
+
+  & .footer__content {
+    margin: 0 auto;
+    padding: 10rem 0;
+    color: white;
+    @include flexbox(center, space-between);
+
+    & p {
+      font-size: 1.4rem;
+    }
+
+    & a {
+      display: inline-block;
+      width: 5.4rem;
+      height: 5.4rem;
+      border-radius: 50%;
+      line-height: 5.4rem;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin-left: 5px;
+      font-size: 1.6rem;
+      text-align: center;
+      color: #fff;
+      transition: all 0.3s linear;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+
+.backToTop {
+  width: 6rem;
+  height: 6rem;
+  line-height: 6rem;
+  border-radius: 4px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.25);
+  font-weight: bold;
+  color: #fff;
+  // position fixed căn chỉnh theo thằng cha của nó
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+// Keyframes cho Arrow bounce Carousel
 @keyframes fade {
   100% {
     opacity: 0;

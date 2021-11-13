@@ -396,6 +396,62 @@ li {
   border: 1px solid transparent;
 }
 
+.footer {
+  background-color: #000;
+  height: 100%;
+}
+.footer .footer__content {
+  margin: 0 auto;
+  padding: 10rem 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.footer .footer__content p {
+  font-size: 1.4rem;
+}
+.footer .footer__content a {
+  display: inline-block;
+  width: 5.4rem;
+  height: 5.4rem;
+  border-radius: 50%;
+  line-height: 5.4rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-left: 5px;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s linear;
+}
+.footer .footer__content a:hover {
+  background-color: #e62b4a;
+}
+
+.backToTop {
+  width: 6rem;
+  height: 6rem;
+  line-height: 6rem;
+  border-radius: 4px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.25);
+  font-weight: bold;
+  color: #fff;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
 @keyframes fade {
   100% {
     opacity: 0;
