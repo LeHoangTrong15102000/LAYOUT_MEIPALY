@@ -57,6 +57,7 @@ li {
 
 .container {
   // Nếu mà nhỏ hơn thì max của nó vẫn là 106rem
+  // No sẽ tạo ra cái thùng chứa nội dung vào bên trong với width ko vượt quá 106rem;
   max-width: 106rem;
   margin: auto;
   // background-color: #000;
@@ -176,6 +177,7 @@ li {
 
   & .title {
     color: white;
+    // margin-top: đẩy cái nội dung cách xuống 7rem
     margin-top: 7rem;
 
     & p:first-of-type {
@@ -496,12 +498,41 @@ li {
 }
 
 .experience {
-  padding: 12rem 0;
+  padding: 6rem 0;
   background-image: url(../img/bussiness_img_1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+
+  & header {
+    color: white;
+    // margin-top: đẩy cái nội dung cách xuống 7rem
+    text-align: center;
+    margin-top: 3rem;
+
+    & p:first-of-type {
+      color: $primary-color;
+      margin-bottom: 2rem;
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+
+    & h2 {
+      font-size: 4.5rem;
+      font-weight: 400;
+    }
+
+    & p:last-of-type {
+      color: #888;
+      margin-bottom: 2.5rem;
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+      // letter-spacing: 1.2px;
+      line-height: 2.2rem;
+    }
+  }
 }
 
 .contact {
