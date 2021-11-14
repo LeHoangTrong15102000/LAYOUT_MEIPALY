@@ -489,7 +489,7 @@
 
     <!--Number-->
     <section id="number" class="number">
-      <div class="number__content">
+      <div class="number__content wow animate__animated animate__fadeInLeft">
         <div class="number__item">
           <p class="counter">8,705</p>
           <p>PROJECTS COMPLETED</p>
@@ -515,10 +515,12 @@
     <!--Trust-->
     <section  class="trust">
       <div class="trust__content">
+        <!--left-->
         <div class="trust__left">
           <img src="./assets/img/trusted__img_1.jpg" alt="">
         </div>
 
+        <!--right-->
         <div class="trust__right">
           <h2>
             WE ARE TRUSTED BY MORE THAN 8900 CLIENTS
@@ -632,19 +634,30 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!--Counter-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+    <script src="./assets/js/jquery.countup.js"></script>
     <script>
+
+      // Count Up
+      $('.counter').countUp();
+    </script>
+
+
+    <!-- <script>
       //SLICK
       // $('.slick-content').slick({
       //   infinite: true;
       //   slidesToShow: 5;
       // })
-    </script>
+    </script> -->
     <script src="./js/waypoint.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/mixitup.min.js"></script>
     <script src="./js/jquery.fancybox.min.js"></script>
-    <script src="./js/jquery.countup.js"></script>
     <script src="./assets/js/util.js"></script>
     <script src="./assets/js/main.js"></script>
     <!-- <script src="./assets/js/backToTop.js"></script> -->

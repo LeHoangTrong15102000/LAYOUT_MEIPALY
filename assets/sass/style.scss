@@ -493,8 +493,108 @@ li {
   }
 }
 
+.number {
+  background-color: #000;
+  padding: 10rem 0 22rem;
+  height: 43.7rem;
+  // color: white;
+
+  & .number__content {
+    width: 70%;
+    margin: 0 auto; // căn giữa
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  & .number__item {
+    width: 25%;
+    border-right: 2px solid #888;
+  }
+
+  & .number__item:last-of-type {
+    border-right: none;
+  }
+
+  & .counter {
+    font-size: 6rem;
+    color: white;
+    font-weight: 300;
+  }
+
+  & .number__item p:last-of-type {
+    font-size: 2rem;
+    color: #888;
+    margin-top: 1rem;
+  }
+}
+
 .trust {
   // margin-top: 10rem;
+  height: 55.1rem;
+
+  & .trust__content {
+    width: 75%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  & .trust__left {
+    width: 72%;
+    height: 65rem;
+    position: absolute;
+    top: -21rem;
+    left: 0;
+    z-index: 1;
+
+    & img {
+      width: 100%; // bằng 100% thẻ cha nó
+      height: 100%; // 65rem;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(50%);
+    }
+  }
+
+  & .trust__right {
+    width: 60%;
+    padding: 9.5rem 0 9.5rem 9.5rem;
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+
+    & h2 {
+      font-size: 4.5rem;
+      color: black;
+      font-weight: 400;
+    }
+
+    & p {
+      font-size: 1.8rem;
+      line-height: 3rem;
+      color: #888;
+      margin: 4.5rem 0;
+    }
+
+    & .btnMei {
+      padding: 1.9rem 4rem;
+      background-color: black;
+      color: white;
+      letter-spacing: 1px;
+      font-weight: 300;
+
+      &:hover {
+        cursor: pointer;
+        // opacity: 0.9;
+        background-color: $primary-color;
+        transition: all 0.4s linear;
+        border: 1px solid transparent;
+      }
+    }
+  }
 }
 
 .experience {
