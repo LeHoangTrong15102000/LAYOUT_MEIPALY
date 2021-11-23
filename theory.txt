@@ -89,3 +89,15 @@ khi các phần tử được scale lên mà nó lòi ra ngoài thì chúng ta s
 
 
 // Buổi tiếp theo chúng ta sẽ làm Responsive và Bootstrap
+
+    - Reponsive
+
+    - Adaptive dùng cho những thằng giàu
+
+    - Trên điện thoại thì người ta sẽ ẩn cái navbar đi và hiện cái menu nút
+
+// Kể từ Các bài sau chúng ta sẽ sử dụng bootstrap để xây dựng dự án
+
+    - Dùng class của bootstrap vào thì chúng ta sẽ có một cái giao diện tiện ích
+
+    - Trong bootstrap nó cũng sẽ có breakpoint như ở trong reponsive
